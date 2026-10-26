@@ -1,0 +1,44 @@
+# SNUH Vitrectomy source CSV uses phase_or_event with string labels.
+# Numeric aliases preserve the ID mapping from the prior TeCNO preprocessing.
+# Edit this file to add, exclude, or merge labels. Re-run prepare after changes.
+raw_to_canonical:
+  "0": preparation
+  "1": trocar
+  "2": cataract
+  "3": core_vitrectomy
+  "4": triamcinolone
+  "5": staining
+  "6": anterior
+  "7": peeling
+  "8": laser
+  "9": peripheral
+  "10": anesthesia
+  "11": closure
+  "12": transition
+  "13": idle
+  "14": other
+  "15": fluid_air
+  "preparation": preparation
+  "trocar": trocar
+  "cataract": cataract
+  "core_vitrectomy": core_vitrectomy
+  "triamcinolone": triamcinolone
+  "staining": staining
+  "anterior": anterior
+  "peeling": peeling
+  "laser": laser
+  "peripheral": peripheral
+  "anesthesia": anesthesia
+  "closure": closure
+  "transition": transition
+  "idle": idle
+  "other": other
+  "fluid_air": fluid_air
+
+# All phases except the three previously excluded IDs 0/12/13.
+phase_order: [trocar, cataract, core_vitrectomy, triamcinolone, staining, anterior, peeling, laser, peripheral, anesthesia, closure, other, fluid_air]
+excluded_phase: [preparation, transition, idle]
+inactive_raw: ["0", "12", "13", "preparation", "transition", "idle"]
+unlabeled_raw: ["-100"]
+unknown_policy: skip_video  # error | skip_frame | skip_video
+colors: {}

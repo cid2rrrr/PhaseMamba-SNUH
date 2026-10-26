@@ -1,0 +1,1 @@
+Based on latest 2026-10-23 vitphase package: original models.py/common.py/data.py/preprocess.py/postprocess.py/visualize.py preserved, except visualize predictions probability fields; custom inference CLI only. No pretrained or trained checkpoints included.
